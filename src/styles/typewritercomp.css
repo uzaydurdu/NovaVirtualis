@@ -1,0 +1,37 @@
+/* TypewriterComp.css */
+.typewriter-container {
+    margin: 0;
+    padding: 2rem;
+
+  }
+
+  
+  
+  .typewriter-text {
+    font-weight: bold;
+    color: #AEFE14;
+    text-shadow: 0 0 8px #AEFE14; /* Add a glowing shadow effect */
+  }
+  
+  .typewriter-cursor {
+    color: #AEFE14;
+    text-shadow: 0 0 8px #AEFE14; /* Add a glowing shadow effect */
+  }
+
+  @media screen and (max-width: 768px) {
+     .typewriter-container{
+       
+      
+     }
+
+     .typewriter-text-we{
+      font-size: 28px;
+    }
+
+     .typewriter-text{
+    
+        font-size: 28px;
+
+     
+     }
+    }

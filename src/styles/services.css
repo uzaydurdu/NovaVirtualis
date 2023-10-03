@@ -1,0 +1,96 @@
+.section {
+    height: 100vh;
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container {
+    width: 1500px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  .right {
+    flex: 1;
+    align-items: center;
+    display: flex;
+  }
+  
+  .list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .list-item {
+    font-size: 90px;
+    font-weight: bold;
+    cursor: pointer;
+    color: transparent;
+    cursor: pointer;
+    -webkit-text-stroke: 1px #AEFE14;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .list-item::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(89.97deg, #27AA80  10%, #AEFE14 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 100%;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 0.8s ease; /* Animate the width property */
+  }
+  
+  .list-item:hover {
+    color: transparent; /* Set the text color to transparent on hover */
+  }
+  
+  
+  .list-item:hover::after {
+    width: 100%; /* Expand from 0 to 100% on hover */
+  }
+  
+
+  @media screen and (max-width: 768px) {
+
+    .section {
+      scroll-snap-align: unset;
+    }
+
+    .list-item {
+      font-size: 48px;
+      margin-left: 2rem;
+
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+
+    .section{
+      scroll-snap-align: unset;
+    }
+    .container{
+      flex-direction: column;
+    }
+
+    .list-item {
+      font-size: 24px;
+      margin-left: 2rem;
+
+    }
+  }
