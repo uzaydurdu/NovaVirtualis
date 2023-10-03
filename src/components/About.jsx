@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { CubeCanvas, AvatarLoader } from '../components';
+import { CubeCanvas, AvatarLoader, AtomicText } from '../components';
 
 const Section = styled.div`
   height: 100vh;
@@ -55,7 +55,7 @@ const Right = styled.div`
 
   @media only screen and (max-width: 768px), only screen and (max-width: 425px){
     flex: 1;
-    margin-top: 4rem;
+    margin-top: -8rem;
     width: 100%;
   }
 `
@@ -187,7 +187,7 @@ const About = () => {
           <Button  onClick={() => handleLinkClick("/#contact")} > Work With Us </Button>
         </Left>
         <Right>
-          <AvatarLoader />
+          <AtomicText />
         </Right>
       </Container>
     </Section>

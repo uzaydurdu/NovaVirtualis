@@ -1,4 +1,4 @@
-import { EarthCanvas, BallCanvas, VRglassCanvas, StarsCanvas, CubeCanvas, AvatarLoader } from './canvas';
+import { EarthCanvas, BallCanvas, VRglassCanvas, StarsCanvas, CubeCanvas, AvatarLoader, AtomicText } from './canvas';
 import Hero from './Hero';
 import Navbar from './Navbar';
 import About from './About';
@@ -32,5 +32,6 @@ export {
   Carousel,
   Services,
   AtomSimulation,
-  AvatarLoader
+  AvatarLoader,
+  AtomicText,
 }

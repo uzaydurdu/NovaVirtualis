@@ -82,7 +82,7 @@ const VrGlass = () => {
     <mesh>
       <hemisphereLight intensity={0.15} groundColor="black" />
       <pointLight intensity={4} position={[0, 1, 1]} color="#27AA80"/>
-      <primitive object={scene} scale={isSmallScreen ? 0.6 : 0.8} />
+      <primitive object={scene} scale={isSmallScreen ? 0.3 : 0.8} />
       
      
     </mesh>
