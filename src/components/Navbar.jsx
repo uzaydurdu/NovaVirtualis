@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
-import { logo } from "../../public/assets/novaLogo2.png";
+import novaLogo from '../../public/assets/novaLogo2.png';
 
 
 
@@ -193,7 +193,7 @@ const Navbar = () => {
   return (
     <Section>
       <Container>
-        <Logo src={logo} />
+        <Logo src={novaLogo} />
         <Links>
 
           <List>
