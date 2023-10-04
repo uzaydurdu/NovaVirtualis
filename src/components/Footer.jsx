@@ -61,7 +61,7 @@ const Footer = () => {
               </div>
               <div className="socialmedia">
 
-                <a href="/insta" class="image-link">
+                <a href="https://twitter.com/NVirtualis" class="image-link" onClick={(e) => handleIconClick("https://twitter.com/NVirtualis", e)}>
                   <img src={x} alt="X" />
                   <span className="text">On Twitter</span>
                 </a>
