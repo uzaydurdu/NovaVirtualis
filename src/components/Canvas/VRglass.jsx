@@ -2,6 +2,7 @@ import { React, useRef, useState } from 'react';
 import { Canvas,  useFrame, useLoader } from '@react-three/fiber';
 import { OrbitControls, useGLTF, useAnimations } from '@react-three/drei';
 import { EffectComposer, Bloom, Noise, Vignette } from '@react-three/postprocessing';
+import { kb } from '../../public/keyboard/kb.gltf';
 import { useMediaQuery } from '@react-hook/media-query';
 import * as THREE from 'three';
 import '../../styles/vrglass.css';
@@ -37,7 +38,7 @@ const Electron = ({ radius, speed, position }) => {
 
 const VrGlass = () => {
   //const vrGlass = useGLTF('/keyboard/kb.gltf');
-  const { scene, animations } = useGLTF('../../public/keyboard/kb.gltf');
+  const { scene, animations } = useGLTF({kb});
   const mixer = new THREE.AnimationMixer(scene);
   
   const isSmallScreen = useMediaQuery('(max-width: 768px)');

@@ -3,11 +3,12 @@ import { Canvas,  useFrame, useLoader } from '@react-three/fiber';
 import { OrbitControls, useGLTF, useAnimations } from '@react-three/drei';
 import { EffectComposer, Bloom, Noise, Vignette } from '@react-three/postprocessing';
 import { useMediaQuery } from '@react-hook/media-query';
+import { nvText } from '../../public/keyboard/3dtext.gltf';
 import * as THREE from 'three';
 
 const NovaText = () => {
 
-    const { scene, animations } = useGLTF('../../public/keyboard/3dtext.gltf');
+    const { scene, animations } = useGLTF({nvText});
     const mixer = new THREE.AnimationMixer(scene);
 
     const isSmallScreen = useMediaQuery('(max-width: 768px)');
