@@ -38,7 +38,8 @@ const Electron = ({ radius, speed, position }) => {
 
 const VrGlass = () => {
   //const vrGlass = useGLTF('/keyboard/kb.gltf');
-  const gltf = useLoader(GLTFLoader, '../../../public/keyboard/kb.gltf')
+  const _url = "https://raw.githubusercontent.com/uzaydurdu/NovaVirtualis/main/public/keyboard/3dtext.gltf";
+  const gltf = useLoader(GLTFLoader, _url)
   //const { scene, animations } = useGLTF('../../../public/keyboard/kb.gltf');
   const scene = gltf.scene;
   const animations = gltf.animations;

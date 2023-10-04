@@ -7,7 +7,8 @@ import { useMediaQuery } from '@react-hook/media-query';
 import * as THREE from 'three';
 
 const NovaText = () => {
-    const gltf = useLoader(GLTFLoader, '../../../public/keyboard/3dtext.gltf');
+  const _url = 'https://raw.githubusercontent.com/uzaydurdu/NovaVirtualis/main/public/keyboard/3dtext.gltf';
+    const gltf = useLoader(GLTFLoader, _url);
     //const { scene, animations } = useGLTF('../../../public/keyboard/3dtext.gltf');
     const scene = gltf.scene;
     const animations = gltf.animations;
