@@ -37,7 +37,7 @@ const Electron = ({ radius, speed, position }) => {
 
 const VrGlass = () => {
   //const vrGlass = useGLTF('/keyboard/kb.gltf');
-  const { scene, animations } = useGLTF('/keyboard/kb.gltf');
+  const { scene, animations } = useGLTF('../../public/keyboard/kb.gltf');
   const mixer = new THREE.AnimationMixer(scene);
   
   const isSmallScreen = useMediaQuery('(max-width: 768px)');

@@ -7,7 +7,7 @@ import * as THREE from 'three';
 
 const NovaText = () => {
 
-    const { scene, animations } = useGLTF('/keyboard/3dtext.gltf');
+    const { scene, animations } = useGLTF('../../public/keyboard/3dtext.gltf');
     const mixer = new THREE.AnimationMixer(scene);
 
     const isSmallScreen = useMediaQuery('(max-width: 768px)');

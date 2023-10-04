@@ -192,7 +192,7 @@ const Navbar = () => {
   return (
     <Section>
       <Container>
-        <Logo src="/assets/novaLogo2.png" />
+        <Logo src="../../public/assets/novaLogo2.png" />
         <Links>
 
           <List>
