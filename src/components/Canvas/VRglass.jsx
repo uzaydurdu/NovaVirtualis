@@ -96,13 +96,13 @@ const VrGlass = () => {
     function calculateScaleFactor() {
       if (isSmallScreen) {
         // Define your scaling factor for small screens
-        return 0.3; // Adjust this factor as needed
+        return 0.4; // Adjust this factor as needed
       } else if (isNormalScreen) {
         // Define your scaling factor for normal screens
-        return 0.3; // Adjust this factor as needed
+        return 0.5; // Adjust this factor as needed
       } else {
         // Set a specific scaling factor for wide screens (1440px and wider)
-        return 0.5; // Adjust this factor as needed
+        return 0.6; // Adjust this factor as needed
       }
     }
 

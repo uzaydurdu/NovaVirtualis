@@ -48,13 +48,14 @@ const Left = styled.div`
     padding: 1rem;
   }
 
- 
+  @media only screen and (max-width: 1440px){
+    margin: 0;    
+  }
 `
 
 const Right = styled.div`
   flex: 3;
   position: relative;
-  width: 0%;
   @media only screen and (max-width: 768px), only screen and (max-width: 425px) , only screen and (max-width: 1024px){
     flex: 1;
     
