@@ -17,8 +17,6 @@ const NetworkGraph = () => {
     const nodes = data.nodes;
     const links = data.links;
 
-    console.log('Node data:', nodes);
-
     const simulation = d3.forceSimulation(nodes)
       .force('link', d3.forceLink(links).id(d => d.id))
       .force('charge', d3.forceManyBody().strength(-250))
