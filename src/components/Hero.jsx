@@ -45,18 +45,19 @@ const Left = styled.div`
     flex: 1;
     align-items: center;
     margin: 0;
-    padding: 1rem;
+    padding: 1rem 0 0 0;
   }
 
-  @media only screen and (max-width: 1440px){
-    margin: 0;    
+  @media only screen and (max-width: 425px), only screen and (max-width: 375px), only screen and (max-width: 320px){
+    padding: 5rem 0 0 0;
   }
+
 `
 
 const Right = styled.div`
   flex: 3;
   position: relative;
-  @media only screen and (max-width: 768px), only screen and (max-width: 425px) , only screen and (max-width: 1024px){
+  @media only screen and (max-width: 768px), only screen and (max-width: 425px) , only screen and (max-width: 1024px),  only screen and (max-width: 1440px){
     flex: 1;
     
   }
@@ -73,14 +74,10 @@ const Line = styled.div`
   margin-left: 3.2rem;
 `
 
-const Subtitle = styled.h2`
-
-
-`
 
 const Description = styled.div`
   font-size: 18px;
-  margin: 0 0 2rem 2rem;
+  margin: 0 0 2rem 0rem;
   color: lightgray;
   text-align: justify;
 
@@ -98,7 +95,6 @@ const Description = styled.div`
 `
 
 const Button = styled.button`
-  margin-left: 2rem;
   width: 8rem;
   padding: 16px 8px;
   cursor: pointer;

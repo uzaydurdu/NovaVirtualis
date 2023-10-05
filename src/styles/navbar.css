@@ -4,6 +4,7 @@
     left: 0;
     width: 100%;
     padding: 0 10%;
+    
     backdrop-filter: blur(50px);
     background: transparent;
     display: flex;
