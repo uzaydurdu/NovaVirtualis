@@ -1,23 +1,8 @@
 import React, { useState } from 'react';
+import novaLogo from '../../public/assets/novaLogo2.png';
 import styled from 'styled-components';
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri";
-import novaLogo from '../../public/assets/novaLogo2.png';
-
-
-
-const Links = styled.div`
-  display: flex;  
-  align-items: center;
-  gap: 200px;
-  justify-content: flex-end;
-  flex-direction: row;
-`
-
-const Buttons = styled.div`
-  display: flex;  
-  align-items: center;
-  gap: 20px;
-`
+import '../styles/navbar.css';
 
 const Button = styled.button`
   width: 8rem;
@@ -60,126 +45,29 @@ const Button = styled.button`
   }
 `
 
-const Logo = styled.img`
-  height: 128px;
-  width: 248px;
-  margin: -1rem;
-  margin-left: 1rem;
-  cursor: pointer;
-
-  
-`
-
-const List = styled.ul`
-  display: flex;
-  gap: 20px;
-  list-style: none;
-`
-const ListMenu = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  list-style: none;
-`
-
-const ListItem = styled.li`
-  cursor: pointer;
-  margin: 0 3.8rem;
-`
-
-const NavbarMenu = styled.div`
-  margin-left: 1rem;
-  display: none;
-  position: relative;
-`
-
-const LinksMenu = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  text-align: end;
-  background: #121212;
-  position: absolute;
-  padding: 2rem;
-  top: 40px;
-  right: 0;
-  margin-top: 1rem;
-  gap: 30px;
-  min-width: 210px;
-  border-radius: 5px;
-  box-shadow: 0 0 5 rgba(0, 0, 0, 0.4);
-`
-
-const Section = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  padding: 0 8rem;
-  align-items: center;
-  z-index: 5;
-
-  @media screen and (max-width: 768px){
-    width: 100%;
-  }
-
-  @media only screen and (max-width: 425px){
-    padding: 0;
-  }
-`
-
-const Container = styled.div`
+const Buttons = styled.div`
   display: flex;  
-  width: 1600px;
-  justify-content: space-between;
   align-items: center;
-  padding: 0rem 2rem;
-  
-  @media screen and (max-width: 1050px) {
-    ${Links} {
-      display: none;
-    }
-
-
-  
-    ${NavbarMenu} {
-      display: flex;
-    }
-  }
-
-  @media only screen and (max-width: 768px){
-    width: 100%;
-  }
-
-  @media only screen and (max-width: 425px){
-    width: 100%;
-    padding: 0;
-    justify-content: space-around;
-  align-items: center;
-  }
-
-  @media screen and (max-width: 425px) {
-    ${Logo} {
-      transform: scale(0.7); /* Adjust the scale factor as needed */
-      margin: 0;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-   
-  }
+  gap: 20px;
 `
-
-const StyledLink = styled.a`
-  cursor: pointer;
-  text-decoration: none;
-  color: lightgray;
-`;
 
 const StyledLinkButton = styled.a`
   cursor: pointer;
   text-decoration: none;
   color: #1c2832;
 `;
+
+const Links = () => {
+
+  return (
+    <>
+      <a href='#home'>Home</a>
+      <a href='#assets'>Assets</a>
+      <a href='#about'>About Us</a>
+      <a href='#contact'>Contact</a>
+    </>
+  )
+}
 
 const Navbar = () => {
 
@@ -191,24 +79,10 @@ const Navbar = () => {
   };
 
   return (
-    <Section>
-      <Container>
-        <Logo src={novaLogo} />
-        <Links>
-
-          <List>
-            <ListItem> <StyledLink href='#home'>Home</StyledLink> </ListItem>
-            <ListItem> <StyledLink href='#assets'>Assets</StyledLink> </ListItem>
-            <ListItem> <StyledLink href='#about'>About Us</StyledLink> </ListItem>
-            <ListItem> <StyledLink href='#contact'>Contact</StyledLink> </ListItem>
-          </List>
-          <Buttons>
-            <Button onClick={(e) => handleButtonClick("https://assetstore.unity.com/", e)}> <StyledLinkButton href="https://assetstore.unity.com/">Check Assets </StyledLinkButton></Button>
-          </Buttons>
-        </Links>
-        <NavbarMenu>
-
-          {toggleMenu ? (
+    <header className='nova__navbar'>
+      <a href="#home"><img src={novaLogo} className='nova__navbar-logo' /></a>
+      <div className='nova__navbar-menu_container'>
+      {toggleMenu ? (
             <RiCloseLine
               color="#fff"
               size={27}
@@ -224,24 +98,25 @@ const Navbar = () => {
             />
           )}
           {toggleMenu && (
-            <LinksMenu>
-              <ListMenu>
-                <ListItem> Home </ListItem>
-                <ListItem> Projects </ListItem>
-                <ListItem> Assets </ListItem>
-                <ListItem> About Us </ListItem>
-                <ListItem> Contact </ListItem>
-              </ListMenu>
+            <div className='nova__navbar-nav_menu'>
+              <Links />
               <Buttons>
-                <Button onClick={(e) => handleButtonClick("https://assetstore.unity.com/", e)}> <StyledLinkButton href="https://assetstore.unity.com/">Check Assets </StyledLinkButton></Button>
+                <Button onClick={(e) => handleButtonClick("https://assetstore.unity.com/", e)}> Check Assets</Button>
               </Buttons>
-            </LinksMenu>
+            </div>
           )}
-
-        </NavbarMenu>
-
-      </Container>
-    </Section>
+       </div>
+      <div className='nova__navbar-nav_links'>
+        <Links />
+      </div>
+      <div className='nova__navbar-nav_buttons'>
+      <Buttons>
+        <Button onClick={(e) => handleButtonClick("https://assetstore.unity.com/", e)}> Check Assets </Button>
+      </Buttons>
+      </div>
+      
+    
+    </header>
   )
 }
 

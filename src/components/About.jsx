@@ -10,7 +10,7 @@ const Section = styled.div`
   align-items: center
   justify-content: space-between;
 
-  @media only screen and (max-width: 768px), only screen and (max-width: 425px){
+  @media only screen and (max-width: 768px), only screen and (max-width: 425px), only screen and (max-width: 1024px){
     height: 160vh;
   }
 `
@@ -21,7 +21,7 @@ const Container = styled.div`
   display: flex;  
   justify-content: space-between;
 
-  @media only screen and (max-width: 768px), only screen and (max-width: 425px){
+  @media only screen and (max-width: 768px), only screen and (max-width: 425px), only screen and (max-width: 1024px){
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -37,7 +37,7 @@ const Left = styled.div`
   margin: 0 0 0rem 4rem;
   padding-left: 8rem;
 
-  @media only screen and (max-width: 768px), only screen and (max-width: 425px){
+  @media only screen and (max-width: 768px), only screen and (max-width: 425px), only screen and (max-width: 1024px){
     flex: 1;
     align-items: center;
     margin: 0;
@@ -53,7 +53,7 @@ const Right = styled.div`
   align-items: center;
   display: flex;
 
-  @media only screen and (max-width: 768px), only screen and (max-width: 425px){
+  @media only screen and (max-width: 768px), only screen and (max-width: 425px), only screen and (max-width: 1024px){
     flex: 1;
     margin-top: -8rem;
     width: 100%;
@@ -73,6 +73,10 @@ const Title = styled.h1`
   font-size: 48px;
   color: #AEFE14;
 
+  @media only screen and (max-width: 1024px){
+    font-size: 36px;
+  }
+
   @media only screen and (max-width: 768px){
     font-size: 24px;
   }
@@ -89,8 +93,15 @@ const Description = styled.div`
   color: lightgray;
   text-align: justify;
 
-  @media only screen and (max-width: 768px){
+  @media only screen and (max-width: 1024px){
     font-size: 18px;
+   
+    margin: 0;
+    
+  }
+
+  @media only screen and (max-width: 768px){
+    font-size: 16px;
    
     margin: 0;
     
@@ -161,6 +172,12 @@ const HighlightedText = styled.span`
   }
 `
 
+const StyledLink = styled.a`
+  cursor: pointer;
+  text-decoration: none;
+  color: #1c2832;
+`;
+
 const handleLinkClick = (param) => {
   // Add the logic to route to the home page ("/") with a parameter
   // For example: <Button  onClick={() => handleLinkClick("/#assets")} > Explore Us</Button>
@@ -184,7 +201,7 @@ const About = () => {
                   With a team of experts and a commitment to excellence, 
              {' '} <HighlightedText>NovaVirtualis</HighlightedText> is your gateway to the extraordinary.
           </Description>
-          <Button  onClick={() => handleLinkClick("/#contact")} > Work With Us </Button>
+          <Button><StyledLink href= "#contact">Work With Us</StyledLink> </Button>
         </Left>
         <Right>
           <AtomicText />

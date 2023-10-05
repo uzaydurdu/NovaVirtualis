@@ -19,7 +19,7 @@ const Container =  styled.div`
     display: none;
   }
 
-  @media only screen and (max-width: 768px), only screen and (max-width: 425px){
+  @media only screen and (max-width: 768px), only screen and (max-width: 425px), only screen and (max-width: 1024px){
     scroll-snap-type: unset;
     scroll-snap-align: unset;
   }

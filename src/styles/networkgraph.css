@@ -1,0 +1,14 @@
+.graph-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: auto;
+  }
+  
+  
+  svg {
+    max-width: 100%; 
+    width: 800px;  
+  }
+
+  

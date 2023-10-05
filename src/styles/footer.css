@@ -94,11 +94,7 @@ a .text {
     gap: 1.5rem;
 }
 
-.socialmedias .socialmedia:first-child a.image-link img[src$="yt.png"] {
 
-    filter: grayscale(100%); 
-
-  }
 
 .socialmedias img{
     width:40%;

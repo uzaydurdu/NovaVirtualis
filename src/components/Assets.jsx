@@ -1,5 +1,6 @@
 import React from 'react';
 import Tilt from "react-parallax-tilt";
+import styled from 'styled-components';
 import '../styles/assets.css';
 import as1 from '../../public/assets/as1.png';
 import as2 from '../../public/assets/kb.png';
@@ -19,6 +20,51 @@ const assetsData = [
   },
 ];
 
+const Button = styled.button`
+  display: inline-block;
+  margin-top: 1rem;
+  margin-left: 2.7rem;
+  width: 8rem;
+  padding: 16px 8px;
+  cursor: pointer;
+  background: linear-gradient(89.97deg, #AEFE14  10%, #27AA80 90%);
+  color: #444654;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 500;
+  transition: all 0.3s ease; /* Add transitions for opacity, box-shadow, and background-color */
+  overflow: hidden;
+  position: relative; /* Add position relative to contain the ::before element */
+
+  
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 24px;
+    background: #f3f3f3;
+    box-shadow: 0 0 10px #fff;
+    filter: blur(1px);
+    opacity: 0.8;
+    top: -30px;
+    transition: 0.7s;
+    transform: rotate(-20deg) translateX(-60px);
+    
+  }
+
+  &:hover {
+    opacity: 0.7; /* Reduce opacity on hover */
+    box-shadow: 0 0 20px rgba(174, 254, 20, 0.7), 0 0 20px rgba(174, 254, 20, 0.7); /* Add a shining shadow on hover */
+    background-color: #B2FF28; /* Adjust background color for a shining effect */
+
+    &::before {
+      transform: rotate(-20deg) translate(140px, 70px);
+    }
+  }
+`
+
+
 const Assets = () => {
   return (
     <div className='assets' >
@@ -33,20 +79,20 @@ const Assets = () => {
           glareBorderRadius="10px"
           glarePosition="bottom"
           glareColor={"#AEFE14"}
-          className="tilt-img"
+          className="asset__card"
           scale={1.1}
           transitionSpeed={2000}
           gyroscope={true}
         >
-          <div className='assets__tilt_card'>
-            <div className='tilt-content'>
-              <div className="image-container">
-                <img src={data.image} alt={data.title} />
-              </div>
-              <h2>{data.title}</h2>
-              <p>{data.description}</p>
-              <a href={data.link}>Learn more</a>
-            </div>
+
+
+          <img src={data.image} alt={data.title} />
+
+          <div className='tilt-content'>
+
+            <h2>{data.title}</h2>
+            <p>{data.description}</p>
+            <Button href={data.link}>Learn more</Button>
           </div>
         </Tilt>
       ))}

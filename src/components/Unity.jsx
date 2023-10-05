@@ -6,7 +6,7 @@ const UnityExplanation = styled.div`
   flex-direction: column;
   align-item: center;
   
-  @media only screen and (max-width: 425px), only screen and (max-width: 768px){
+  @media only screen and (max-width: 425px), only screen and (max-width: 768px), only screen and (max-width: 1024px){
     align-items: center;
     margin-left: 1.5rem;
   }
@@ -14,6 +14,10 @@ const UnityExplanation = styled.div`
 const Title = styled.h1`
   font-size: 48px;
   color: #AEFE14;
+
+  @media only screen and (max-width: 1024px){
+    font-size: 36px;
+  }
 
   @media only screen and (max-width: 768px){
     font-size: 24px;
@@ -40,8 +44,14 @@ const Description = styled.div`
   color: lightgray;
   text-align: justify;
 
-  @media only screen and (max-width: 768px){
+  @media only screen and (max-width: 1024px){
     font-size: 18px;
+    padding: 0 4rem 0rem 0rem;
+    margin: 0;
+  }
+
+  @media only screen and (max-width: 768px){
+    font-size: 16px;
     padding: 0 4rem 0rem 0rem;
     margin: 0;
   }

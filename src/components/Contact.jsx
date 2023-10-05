@@ -9,7 +9,7 @@ const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
 
-  @media only screen and (max-width: 768px), only screen and (max-width: 425px){
+  @media only screen and (max-width: 768px), only screen and (max-width: 425px), only screen and (max-width: 1024px){
     height: 200vh;
     scroll-snap-align: unset;
   }
@@ -22,7 +22,7 @@ const Container = styled.div`
   justify-content: space-between;
   gap: 2.0rem;
 
-  @media only screen and (max-width: 768px), only screen and (max-width: 425px){
+  @media only screen and (max-width: 768px), only screen and (max-width: 425px), only screen and (max-width: 1024px){
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -46,26 +46,39 @@ const Left = styled.div`
   align-items: center;
   justify-content: center;
   
-@media only screen and (max-width: 768px), only screen and (max-width: 425px){
+@media only screen and (max-width: 768px), only screen and (max-width: 425px), only screen and (max-width: 1024px){
     flex: 1;
     align-items: center;
-    margin: 0;
     padding: 1rem;
+    margin: 0;
   }
+
+ 
+  
 `
 
 const Right = styled.div`
   flex: 1;
 
-  @media only screen and (max-width: 768px), only screen and (max-width: 425px){
+  @media only screen and (max-width: 768px), only screen and (max-width: 425px), only screen and (max-width: 1024px){
     width: 100%;
-    margin-left: 6.5rem;
+    margin: auto;
+    margin-left: 3rem;
+  }
+
+  @media only screen and (max-width: 375px){
+    margin-left: 1.5rem;
+  }
+
+    @media only screen and (max-width: 320px){
+    margin-left: 0;
   }
 `
 
 const Form = styled.form`
   width: 35.2rem;
   display: flex;
+  margin-top: 4rem;
   flex-direction: column;
   gap: 2.0rem;
   position: relative;
@@ -73,6 +86,12 @@ const Form = styled.form`
   background: #121212;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+
+  @media only screen and (max-width: 1440px){
+    padding: 1rem 4rem;
+    margin-left: 4rem;
+    margin-bottom: -1.9rem;
+  }
 
   @media only screen and (max-width: 768px){
     width: 25.2rem;
@@ -82,6 +101,14 @@ const Form = styled.form`
     width: 20.2rem;
     padding: 2rem;
     margin-left: 6.5rem;
+  }
+  @media only screen and (max-width: 375px){
+    margin-left: 3.2rem;
+    
+  }
+  @media only screen and (max-width: 320px){
+   width: 18rem;
+   margin-right: 3.4rem;
   }
 `
 
@@ -142,8 +169,8 @@ const TextArea = styled.textarea`
   border-radius: 10px;
   max-width: 27.2rem;
   min-width: 27.2rem;
-  min-height: 16rem;
-  max-height: 300px;
+  min-height: 80px;
+  max-height: 150px;
   color: #lightgray;
   outline: none;
   transition: all 0.3s ease;

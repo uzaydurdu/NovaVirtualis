@@ -11,7 +11,7 @@ const Section = styled.div`
   align-items: center
   justify-content: space-between;
 
-  @media only screen and (max-width: 768px), only screen and (max-width: 425px){
+  @media only screen and (max-width: 768px), only screen and (max-width: 425px), only screen and (max-width: 1024px){
     height: 160vh;
     scroll-snap-align: unset;
   }
@@ -19,11 +19,12 @@ const Section = styled.div`
 const Container = styled.div`
   height: 100%;
   scroll-snap-align: center;
-  width: 1800px;
+  width: 100%;
   display: flex;  
+  align-items: center;
   justify-content: space-between;
 
-  @media only screen and (max-width: 768px), only screen and (max-width: 425px){
+  @media only screen and (max-width: 768px), only screen and (max-width: 425px), only screen and (max-width: 1024px){
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -36,26 +37,30 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 0 8rem 4rem;
-  padding-left: 8rem;
   gap: 20px;
+  width: 100%;
+  margin-left: 10rem;
 
-  @media only screen and (max-width: 768px), only screen and (max-width: 425px){
+  @media only screen and (max-width: 768px), only screen and (max-width: 425px), only screen and (max-width: 1024px){
     flex: 1;
     align-items: center;
     margin: 0;
     padding: 1rem;
   }
+
+ 
 `
 
 const Right = styled.div`
   flex: 3;
   position: relative;
-
-  @media only screen and (max-width: 768px), only screen and (max-width: 425px){
+  width: 0%;
+  @media only screen and (max-width: 768px), only screen and (max-width: 425px) , only screen and (max-width: 1024px){
     flex: 1;
-    width: 100%;
+    
   }
+
+  
 `
 
 const Line = styled.div`
@@ -132,11 +137,7 @@ const Button = styled.button`
     }
   }
 
-  @media only screen and (max-width: 768px){
-    margin: 0;
-  }
-
-  @media only screen and (max-width: 425px){
+  @media only screen and (max-width: 1024px){
     margin: 0;
   }
 `
@@ -151,9 +152,15 @@ const HighlightedText = styled.span`
   }
 `
 
+const StyledLink = styled.a`
+  cursor: pointer;
+  text-decoration: none;
+  color: #1c2832;
+`;
+
 const handleLinkClick = (param) => {
   // Add the logic to route to the home page ("/") with a parameter
-  // For example: <Button  onClick={() => handleLinkClick("/#assets")} > Explore Us</Button>
+  // For example:
   window.location.href = `/?param=${param}`;
 };
 
@@ -169,7 +176,7 @@ const Hero = () => {
             <HighlightedText>NovaVirtualis</HighlightedText> delivers immersive VR experiences, complete project packages, seamless interactions,
             and robust analytics, providing compact, powerful VR solutions.
           </Description>
-          <Button  onClick={() => handleLinkClick("/#assets")} > Explore Us</Button>
+          <Button > <StyledLink href= "#assets">Explore Us</StyledLink></Button>
         </Left>
         <Right>
           <VRglassCanvas />

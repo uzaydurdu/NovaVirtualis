@@ -1,160 +1,62 @@
 .assets{
-    width: 100%;
-    height: auto;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    margin: auto;
+    gap: 20px;
     align-items: center;
-
-    justify-content: left;
-    align-items: center;
-    gap: 80px;
-
 }
 
+.asset__card{
+  width: 250px;
+  background-color: #121212;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow:  0px 2px 4px rgba(0,0,0,0.2);
+  margin: 20px;
+}
 
-.assets__tilt_card {
-    width: 280px;
-    height: 350px;
-    position: relative;
-    background: #121212;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    perspective: 900px;
-    transition: transform 0.5s;
-
+.asset__card img{
+  width: 100%;
+  height: auto;
 }
 
 .tilt-content {
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: hidden;
-    text-align: justify;
-  }
-  
-  .tilt-content p {
-    color: lightgray;
-    max-height: 150px; /* Set your desired max height */
+  padding: 1rem;
+}
+
+.tilt-content h2{
+  font-size: 22px;
+  margin-bottom: .5rem;
+}
+
+.tilt-content p{
+  color: rgb(180, 180, 180);
+  font-size: 15px;
+  line-height: 1.3;
+  max-height: 150px; /* Set your desired max height */
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-
-  
-  
-  .tilt-content a{
-    bottom: 0; 
-    margin: 1rem 0;
-    font-weight: bold;
-    background: linear-gradient(89.97deg, #AEFE14 10%, #27AA80 90%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    position: absolute;
-  }
-  
-
-  .image-container {
-    width: 100%;
-    height: 50%;
-    margin-bottom: 1rem;
-    border-radius: 10px; /* Apply border radius to the image container */
-    position: relative;
-    transform-style: preserve-3d; /* Ensure the image tilts with the card */
-    overflow: hidden; /* Ensure the image doesn't overflow */
-  }
-  
-  .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.5s ease; /* Use a transition with "ease" timing function for smooth scaling */
-    transform-origin: center center;
-    transform: scale(1); /* Initial scale, adjust as needed */
-  }
-  
-  h2 {
-    font-size: 18px;
-    margin: 10px 1.3rem;
-    align-self: flex-start;
-    margin-top: 0px;
-  }
-  
-  p {
-    font-size: 14px;
-    margin: 0 20px;
-  }
-  
-  .assets__tilt_card:hover .tilt-content {
-
-    transform: rotateX(1deg) rotateY(1deg);
-  }
-
-  /* Add styles for image scaling on hover */
-.assets__tilt_card:hover .image-container {
-    transition: all 0.5s ease;
-    transform: scale(1.2); /* Adjust the scaling factor as needed */
-  }
-
-
-  /* For screens with a width of 768px or less */
-@media screen and (max-width: 768px) {
-  .assets {
-    flex-direction: row; /* Stack items vertically */
-    gap: 80px; /* Reduce the gap between items */
-  }
-
-  .assets__tilt_card {
-    width: 60%; /* Take the full width of the container */
-    flex: 0 0 calc(105.33% - 0.5rem);
-    max-width: calc(105.33% - 0.5rem);
-    max-height: 280px;
-    margin: auto;
-  }
-
-  .tilt-content p {
-    max-height: 100px; /* Set your desired max height */
-    -webkit-line-clamp: 2; /* Adjust the number of lines to clamp */
-  }
 }
 
-/* For screens with a width of 425px or less */
-@media screen and (max-width: 425px) {
-  .assets {
-    gap: 10px; /* Further reduce the gap between items */
-    align-items: center;
-    justify-content: center;
-  }
-
-  .assets__tilt_card {
-    width: 80%; /* Take the full width of the container */
-    flex: 0 0 calc(165.33% - 1rem);
-    max-width: calc(165.33% - 1rem);
-    max-height: 300px;
-    margin: auto;
-  }
-
-  h2 {
-    font-size: 18px; /* Reduce the font size for headings */
-    margin: 10px 10px; /* Adjust the margins */
-  }
-
-  p {
-    font-size: 12px; /* Reduce the font size for paragraphs */
-    margin: 0 10px; /* Adjust the margins */
-  }
-
-  a {
-    font-size: 12px; /* Reduce the font size for paragraphs */
-    margin: 0 10px; /* Adjust the margins */
-  }
-
-  .assets__tilt_card:hover .image-container {
-    transform: scale(1); /* Reset the scaling on hover */
-  }
+.tilt-content button{
+  display: inline-block;
+  margin-top: 1rem;
+  width: 8rem;
+  padding: 8px 8px;
+  cursor: pointer;
+  background: linear-gradient(89.97deg, #AEFE14 10%, #27AA80 90%);
+  color: #444654;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+ 
 }
+

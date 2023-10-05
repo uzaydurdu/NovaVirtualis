@@ -66,10 +66,40 @@
   }
   
 
+  @media screen and (max-width: 1440px) {
+
+    .list-item {
+      font-size: 68px;
+      margin-left: 8rem;
+
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+
+    .section {
+      scroll-snap-align: unset;
+    }
+
+    .container{
+      flex-direction: column;
+    
+    }
+
+    .list-item {
+      font-size: 48px;
+      margin-left: 2rem;
+
+    }
+  }
+
   @media screen and (max-width: 768px) {
 
     .section {
       scroll-snap-align: unset;
+    }
+    .container{
+      flex-direction: column;
     }
 
     .list-item {

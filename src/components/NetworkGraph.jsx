@@ -4,6 +4,7 @@ import data from '../../public/data/data';
 
 const NetworkGraph = () => {
   const svgRef = useRef();
+  
 
   useEffect(() => {
     const width = window.innerWidth;

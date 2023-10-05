@@ -47,7 +47,7 @@ const OrbitingBubble = ({ bubbleRef, position, scale, speed }) => {
 const EarthGlobe = () => {
   const bubbleRefs = useRef([]);
 
-  const isSmallScreen = useMediaQuery('(max-width: 768px)');
+  const isSmallScreen = useMediaQuery('(max-width: 1024px)');
 
 
     if (bubbleRefs.current.length === 0) {
